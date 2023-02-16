@@ -1,4 +1,4 @@
-#include < studio.h >
+#include <studio.h>
 /**
  * main - A program that prints a line with puts function
  * Return: 0 (success)
