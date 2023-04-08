@@ -1,14 +1,31 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * Writes a single character to stdout
+ * print_binary - prints the binary representation of a number
+ * @n: the number to be printed in binary
  *
- * @param c The character to write
- * @return The character written, or EOF on error
+ * Return: void
  */
-int _putchar(int c)
+void print_binary(unsigned long int n)
 {
-char ch = (char)c;
-return write(STDOUT_FILENO, &ch, 1);
+int i, count = 0;
+unsigned long int current;
+for (i = 63; i >= 0; i--)
+{
+current = n >> i;
+if (current & 1)
+{
+_putchar('1');
+count++;
+}
+else if (count)
+{
+_putchar('0');
+}
+}
+if (!count)
+{
+_putchar('0');
+}
 }
 
