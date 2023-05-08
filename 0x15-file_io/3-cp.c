@@ -99,8 +99,7 @@ free(buffer);
 exit(EXIT_FAILURE);
 }
 r = read(from, buffer, 1024);
-}
-while (r > 0);
+} while (r > 0);
 free(buffer);
 close_file(from);
 close_file(to);
